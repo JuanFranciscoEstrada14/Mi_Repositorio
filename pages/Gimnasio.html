@@ -5,25 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club El Talar</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilosgym.css">
+    <script src="ruta/a/justified.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-            <li><a href="../pages/Historia.html">Historia</a></li>
-            <li><a href="../pages/Gimnasio.html">Gimnasio</a></li>
-            <li><a href="../index.html">Club El Talar</a></li>
-            <li><a href="../pages/Futsal.html">Futsal</a></li>
-            <li><a href="../pages/Basquet.html">Basquet</a></li>
+                <li><a href="../pages/Historia.html">Historia</a></li>
+                <li><a href="../pages/Gimnasio.html">Gimnasio</a></li>
+                <li><a href="../index.html">Club El Talar</a></li>
+                <li><a href="../pages/Futsal.html">Futsal</a></li>
+                <li><a href="../pages/Basquet.html">Basquet</a></li>
             </ul>
         </nav>
     </header>
     <main>
-
+        <div class="logo">
+        <img src="../img/eltaa.png" alt="Logo Club El Talar" class="logo-escudo">
+        </div>
+        <img src="../img/talarg.jpg" alt="Otra imagen" class="full-width-image">
+        <div class="image-wrapper">
+        <img src="../img/talargym.png" alt="Otra imagen más" class="talargym">
+        <p class="texto-derecha texto-parrafo" id="mi-texto">¡Vení a consultar por tus clases con los profe Pablo y Diego! Estamos acá todos los días, de lunes a sábado. Te brindamos un ambiente copado y profesional para que puedas lograr tus objetivos fitness. ¡No te lo pierdas y sumate a nuestra comunidad en Club El Talar!</p>
+        </div>
     </main>
     <footer>
         <img src="../img/banner.jpg" alt="BANNER" style="width:100%; height:25%;">
-    </footer
+    </footer>
+
+    <script>
+        var miTexto = document.getElementById('mi-texto');
+        var justificador = new Justified(miTexto);
+        justificador.layout();
+    </script>
 </body>
 </html>
+

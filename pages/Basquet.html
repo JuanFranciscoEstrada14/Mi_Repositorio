@@ -1,29 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club El Talar</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilosbasquet.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul>
-            <li><a href="../pages/Historia.html">Historia</a></li>
-            <li><a href="../pages/Gimnasio.html">Gimnasio</a></li>
-            <li><a href="../index.html">Club El Talar</a></li>
-            <li><a href="../pages/Futsal.html">Futsal</a></li>
-            <li><a href="../pages/Basquet.html">Basquet</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/eltaa.png" alt="Logo del Club El Talar" width="100" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/Historia.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/Gimnasio.html">Gimnasio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Club El Talar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/Futsal.html">Futsal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/Basquet.html">Basquet</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-    </header> 
+    </header>
     <main>
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 mt-4">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <video controls>
+                                    <source src="../img/basquettalar.mp4" type="video/mp4">
+                                </video>
+                                <div class="carousel-caption">
+                                    <h5>Nuestro último partido</h5>
+                                    <p>Este fue nuestro último partido, el cual nos permitió asegurar el primer puesto y obtener la ventaja deportiva para la próxima etapa.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/Basquetabajo.jpg" class="d-block w-100" alt="Imagen 2">
+                                <div class="carousel-caption">
+                                    <h5>Nuestro Estadio</h5>
+                                    <p>¡Nuestro equipo de básquetbol está listo para encarar nuevos desafíos en la próxima temporada en nuestro estadio de básquetbol! ¡Apóyalos en cada partido y vive la pasión del deporte con nosotros!</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/equipobasquet.png" class="d-block w-100" alt="Imagen 3">
+                                <div class="carousel-caption">
+                                    <h5>Nuestra primera división</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <h2 class="text-center">TABLA DE POSICIONES</h2>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 text-center">
+                    <div class="cronograma-container">
+                        <img src="../img/cronogramaa.jpg" class="img-fluid cronograma" alt="Cronograma de actividades del Club El Talar">
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <img src="../img/banner.jpg" alt="BANNER" style="width:100%; height:25%;">
+        <img src="../img/banner.jpg" alt="Banner">
     </footer>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cronogramaContainer = document.querySelector('.cronograma-container');
+        cronogramaContainer.addEventListener('mouseenter', () => {
+            cronogramaContainer.classList.add('expand');
+        });
+        cronogramaContainer.addEventListener('mouseleave', () => {
+            cronogramaContainer.classList.remove('expand');
+        });
+    </script>
 </body>
-</html>
+
 </html>
