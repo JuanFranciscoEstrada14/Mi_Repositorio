@@ -89,50 +89,48 @@ nav ul li a {
 
 footer {
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    background-color: #000000;
+    padding: 20px;
 }
 
 footer img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.cronograma-img {
-    max-width: 300px;}
+.container {
+    height: 100vh;
+    transition: height 0.3s ease-in-out;
+}
 
+.shrink-on-scroll {
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
 
-    .container {
-        height: 100vh;
-        transition: height 0.3s ease-in-out;
-    }
-    
-    .shrink-on-scroll {
-        height: 100vh;
-        overflow-y: scroll;
-        scrollbar-width: thin;
-    }
-    
-    .shrink-on-scroll::-webkit-scrollbar {
-        width: 6px;
-    }
-    
-    .shrink-on-scroll::-webkit-scrollbar-thumb {
-        background-color: #888;
-        border-radius: 3px;
-    }
-    
-    .shrink-on-scroll.shrink-height {
-        height: 50vh;
-    }
+.shrink-on-scroll::-webkit-scrollbar {
+    width: 6px;
+}
 
-    .carousel-item img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-    }
-    
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    
+.shrink-on-scroll::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+.shrink-on-scroll.shrink-height {
+    height: 50vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
